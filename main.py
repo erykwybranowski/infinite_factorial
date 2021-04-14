@@ -7,9 +7,9 @@ def multi(x: list, y: list):
         x, y = y, x
 
     # create table for multiplications before adding
-    z = [None] * len(y)
+    z = [[]] * len(y)
     for i in range(len(y)):
-        z[i] = [0] * (len(x) + len(x))
+        z[i] = [0] * 2 * len(x)
 
     # transfer for multiplications
     transfer = [0] * (len(x) + 1)
@@ -52,9 +52,9 @@ def multi(x: list, y: list):
     return output
 
 
-def list_to_string(l: list):
+def list_to_string(lst: list):
     s = ""
-    for i in reversed(l):
+    for i in reversed(lst):
         s += str(i)
     return s
 
@@ -77,4 +77,4 @@ def string_factorial(x: int):
 
 
 if __name__ == '__main__':
-    print(string_factorial(500))
+    print(string_factorial(1000))
